@@ -1,0 +1,39 @@
+.container-img {
+  width: 65%;
+}
+
+.container-form {
+ width: 35%;
+ background-color: #e4e4f1;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.link {
+  font-size: 12px;
+  text-decoration: none;
+  color: #6366f1;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.link i {
+  font-size: 16px; /* Tamanho do ícone */
+}
+
+.link:hover {
+  color: #4f46e5;
+  border-bottom: 1px solid #4f46e5;
+}
+
+.link:focus {
+  outline: none;
+  color: #4338ca;
+  border-bottom: 1px solid #4338ca;
+}

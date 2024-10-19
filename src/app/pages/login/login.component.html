@@ -1,1 +1,64 @@
-<p>login works!</p>
+<div class="w-screen h-screen flex flex-row overflow-hidden">
+  <div class="h-screen container-img">
+    <img
+      src="https://canalbusiness.com.br/assets/painel/imagens/login-wallpaper.jpg"
+      class="object-cover w-full h-full"
+    >
+  </div>
+
+  <div class="card flex flex-column justify-content-center h-screen gap-7 container-form p-7">
+
+    <div class="w-full text-center">
+      <h1>Seja Bem-vindo ao MyNotes</h1>
+      <span>Faça o login para acessar a aplicação</span>
+  </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-column justify-content-center gap-4 w-full">
+      <div class="flex flex-column gap-2 w-full">
+        <p-floatLabel>
+          <input
+            pInputText
+            id="email"
+            aria-describedby="email-help"
+            formControlName="email"
+            class="w-full"
+          />
+          <label for="email">Email</label>
+        </p-floatLabel>
+        <small id="email-help">
+          <!-- Enter your email to reset your password. -->
+        </small>
+      </div>
+
+      <div class="flex flex-column gap-2 w-full">
+        <p-floatLabel>
+          <input
+            pInputText
+            type="password"
+            id="password"
+            aria-describedby="password-help"
+            formControlName="password"
+            class="w-full"
+          />
+          <label for="password">Password</label>
+        </p-floatLabel>
+        <small id="password-help">
+          <!-- Enter your password. -->
+        </small>
+      </div>
+
+      <div class="flex flex-row justify-content-between">
+        <a href="/usuario/cadastrar" class="link">
+          <i class="pi pi-user-plus"></i> Cadastre-se agora!
+        </a>
+        <a href="/recuperar-senha" class="link">
+          <i class="pi pi-key"></i> Esqueceu a senha?
+        </a>
+      </div>
+
+      <div class="card flex justify-content-center pt-3">
+        <p-button label="Entrar" icon="pi pi-check" type="submit" />
+      </div>
+    </form>
+  </div>
+</div>
